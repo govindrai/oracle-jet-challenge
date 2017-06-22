@@ -21,9 +21,9 @@ You will be evaluated on the following:
 While you may use any references at your disposal, you may find the following
 resources to be the most useful for this exercise:
 
-* Oracle JET
-* KnockoutJS
-* Mozilla Developer Network
+* [Oracle JET](http://www.oracle.com/webfolder/technetwork/jet/jetCookbook.html)
+* [KnockoutJS](http://knockoutjs.com/documentation/introduction.html)
+* [Mozilla Developer Network](https://developer.mozilla.org/en-US/)
 
 ## Setup
 
