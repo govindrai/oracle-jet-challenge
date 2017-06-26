@@ -3,8 +3,90 @@
  The Universal Permissive License (UPL), Version 1.0
  -->
 <div class="oj-hybrid-padding">
-  <h3>Dashboard Content Area</h3>
-  <div>
-      To change the content of this section, you will make edits to the dashboard.html file located in the /js/views folder.
+
+
+  <h3>Task 1: Implement Infolets</h3>
+  <div id="masonrylayout-basic-example">
+    <div class="demo-scroll-container">
+
+      <div id="masonryLayout" data-bind="ojComponent: {component: 'ojMasonryLayout'}">
+        <div class="oj-panel demo-tile" data-bind="css: 'oj-masonrylayout-tile-3x2'">
+          <p>Quota vs. Won</p>
+            <div id='chart-container' style="height:800px;">
+              <div id="chart" data-bind="ojComponent: {
+                  component: 'ojChart',
+                  type: 'bar',
+                  series: seriesValue,
+                  orientation: orientationValue,
+                  styleDefaults: styleDefaultValue,
+                  legend: {position: 'top'},
+                  yAxis: {tickLabel: {converter: ko.toJS(yAxisConverter)}},
+                  valueFormats: valueFormatsValue
+              }"
+              style="width:100%;max-width:900px;height:500px;">
+             </div>
+          </div>
+        </div>
+
+        <div class="oj-panel demo-tile" data-bind="css: 'oj-masonrylayout-tile-1x1'">
+          <p>Team Leads</p>
+
+        </div>
+        <div class="oj-panel demo-tile" data-bind="css: 'oj-masonrylayout-tile-1x1'">
+          <p>Orders</p>
+            <div id="gauge-container">
+              <div id="gauge2"
+                 data-bind="ojComponent: {
+                 component: 'ojStatusMeterGauge',
+                 min: 0,
+                 max: 100,
+                 thresholds: [{max:65}, {max:80},{}],
+                 thresholdDisplay: 'all',
+                 value: 65,
+                 orientation: 'circular',
+                 plotArea: {rendered: 'on'},
+                 metricLabel: {rendered: 'off'},
+                  title: {text: '$2.8M'},
+                 step: 10,
+                 readOnly: false
+                 }"
+                 style=
+                 "
+                 margin-top:-30px;
+                 margin-bottom:5px;
+                 height:100%;
+                 width:80%;">
+            </div>
+          </div>
+        </div>
+        <div class="oj-panel demo-tile" data-bind="css: 'oj-masonrylayout-tile-1x1'">
+          <p>Service Requests</p>
+          <div>
+            <table id="custom-table">
+              <tr>
+                <td>6</td>
+                <td>Total</td>
+              </tr>
+              <tr>
+                <td class="red">2</td>
+                <td>High</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>Medium</td>
+              </tr>
+            </table>
+          </div>
+
+        </div>
+        <div class="oj-panel demo-tile" data-bind="css: 'oj-masonrylayout-tile-1x1'">
+          <p>My Vacation</p>
+
+        </div>
+      </div>
+
+
+
+    </div>
   </div>
 </div>
